@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanketh-Portfolio</title>
+    <link rel="icon" href="./Assets/img/icons8-portfolio-32.png" type="png">
+    <style>
+        body {
+            background-color: #D0E1FF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            line-height: 2;
+            
+        }
+        header {
+           font-size: 20px;
+            padding: 50px 0;
+        }
+        .profile-photo { 
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            border: 5px solid #4a90e2;
+            object-fit: cover;
+            line-height: normal;
+        }
+        .description {
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .social-icons {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center; /* Center the icons */
+            gap: 20px; /* Space between icons */
+        }
+        .social-icons a {
+            display: inline-block; /* Allows for transformations */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        }
+        .social-icons a:hover {
+            transform: scale(1.1); /* Scale up on hover */
+            opacity: 0.8; /* Slightly fade the logo */
+        }
+        .social-icons img {
+            width: 40px; /* Set the size of the icons */
+            height: 40px; /* Set the size of the icons */
+            animation: pulse 2s infinite; /* Apply pulse animation */
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 1s forwards, pulse 2s infinite; /* Fade in and pulse */
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* End state is fully visible */
+            }
+        }
+        .sliding-logos {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: slide 10s linear infinite;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .sliding-logos img {
+            width: 80px;
+            margin: 0 10px;
+        }
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-container input:focus, .form-container textarea:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #357ab8;
+        }
+    </style>
+</head>
+<body><hr>
+
+<header>
+    <img src="./Assets/img/Snapchat-717784554.jpg" alt="Sanketh" class="profile-photo">
+    <h1>Sanketh Dappur</h1>
+    <p class="description">A motivated and enthusiastic individual eager to embark on a career in full stack development, equipped with foundational knowledge in both front-end and back-end technologies.</p><hr>
+    <h2>Let's Connect</h2>
+    <div class="social-icons" >
+       
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sankethdappur0@gmail.com" class="icon email" target="_blank">
+            <img src="./Assets/img/icons8-gmail-48.png" alt="Email">
+        </a>
+        <a href="https://x.com/Sanketh8787" class="icon twitter" target="_blank">
+            <img src="./Assets/img/icons8-twitter-48.png" alt="Twitter">
+        </a>
+        <a href="https://www.linkedin.com/in/sanketh-dappur-1a78b01b5" class="icon linkedin" target="_blank">
+            <img src="./Assets/img/icons8-linkedin-48.png" alt="LinkedIn">
+        </a>
+    </div>
+</header><hr>
+
+<div class="sliding-logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+    <img src="./Assets/img/icons8-css-logo-48.png" alt="CSS">
+    <img src="./Assets/img/icons8-javascript-64.png" alt="JavaScript">
+    <img src="./Assets/img/icons8-java-48.png" alt="Java">
+    <img src="./Assets/img/icons8-sql-48.png" alt="SQL">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+    </div><hr>
+
+    <div class="form-container">
+        <h2>Contact Me</h2>
+        <form action="A form handling url" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="Email" placeholder="Your Email" required>
+            <input type="number" name="Phone number" placeholder="Your Phone Number" required>
+            <input type="text" rows="5" name="Message" placeholder="Your Message" required>
+            <button type="submit" name="submit">Send</button> 
+        </form>
+    </div><hr>
